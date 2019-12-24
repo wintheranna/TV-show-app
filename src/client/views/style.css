@@ -1,0 +1,302 @@
+body {
+    background: #fffff8;
+    font-family: sans-serif;
+    background-color: #333;
+  }
+
+.pic {
+  background: url('photo2.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  margin-top: 0px;
+  background-color: #333;
+  margin-right: 0px;
+
+  }
+  
+section {
+    align-items: center;
+    background: #c4a7a7c2;
+    color: #eefaff;
+    font-size: 20px;
+    font-family: sans-serif;
+  }
+  
+  
+.facts {
+    padding-bottom: 60px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+.entry {
+    width: 100vw;
+    margin-top: 20px;
+    
+  }
+  
+#entryHolder {
+    margin: 8px;
+    font-size: 16px;
+  }
+
+.text {
+    display: flex;
+    margin-top: 30px;
+    padding-left: 5px;
+    line-height: 25px;
+    letter-spacing: 3px;
+    margin-left: 220px;
+    width: 60vw;
+    background: #c4a7a7b5;
+    color: #eefaff;
+    text-decoration: none;;
+  }
+  
+
+#ourLocation {
+  padding-top: 50px;
+
+  }
+
+  #ourLocation p {
+    margin-right: 30px;
+    margin-bottom: 25%;
+    color: #eefaff;
+
+    
+  }
+
+  
+#photo img {
+  height: 135px;
+  padding-bottom: 5px;
+  
+  }
+
+  
+.holderLocation {
+    justify-content: center;
+    display: flex;
+    margin: 15px;
+  
+  }
+  
+#location {
+    width: 30vw;
+    background-color: #e5d8d8d9;
+  }
+  
+  
+#generate {
+    margin-left: 30px;
+    margin-bottom: 30px;
+  
+  }
+  
+  
+  
+.headline {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 4px;
+    margin: 30px;
+    padding-top: 10px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    word-spacing: 30px;
+    text-shadow: 1px 1px 2px #f1f1f1;
+  
+  }
+  
+.title {
+    margin-top: 70px;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    color: #8e4a4ad9;
+    height: 30px;
+    letter-spacing: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+  
+  }
+
+
+.titles {
+    background-color: #c4a7a7c2;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-left: 10px;
+    color: white;
+    height: 30px;
+    letter-spacing: 10px;
+    font-size: 30px;
+    font-weight: 900;
+    width: 60vw;
+  
+  }
+  
+label {
+    display:block;
+    font-size: 27px;
+    margin-top: 10px;
+    margin-right: 10px;
+  
+  }
+  
+input {
+    display:block;
+    height: 60px;
+    width: 320px;
+    background: #9bcae082;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: sans-serif;
+    border: none;
+    padding-left: 5px;
+  
+  }
+  
+button {
+    width: 90px;
+    height: 30px;
+    background: #607aa0ba;
+    color: #ffffff;
+    font-size: 26px;
+    border: none;
+    margin-top: 10px;
+    font-family: sans-serif;
+    box-shadow: 2px 4px 5px #444;
+    border-radius: 25px;
+  }
+
+ 
+#save:hover {
+  background-color: #333e4eb5;
+
+}  
+
+#delete:hover {
+  background-color: #333e4eb5;
+
+}  
+  
+.myButtons {
+    width: 250px;
+    margin-left: 550px;
+  
+  }
+  
+#save {
+    font-size: 12px;
+    margin-right: 20px;
+    background-color: #a0606096;
+  
+  }
+  
+#delete {
+    font-size: 12px;
+    background-color: #a0606096;
+  
+  }
+  
+h1 {
+    font-size: 36px;
+  
+  }
+  
+footer {
+  
+    color: white;
+    text-align: right;
+   
+  
+  }
+
+#summary {
+    color: white;
+    line-height: 1.5em;
+    height: 150px;
+    margin-left: 20px;
+    width: 60vw;
+    padding-top: 50px;
+    padding-left: 10px;
+    background-color: #c4a7a7c2;
+    letter-spacing: 2px;
+
+  }
+  
+  /* Reset style for HTML element on active to have no border*/
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+      outline: none;
+  }
+  
+  /* Style for Placeholder Text*/
+  ::placeholder { /* Firefox, Chrome, Opera */
+    color: #ffffff;
+    font-family: sans-serif;
+  
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ffffff;
+    font-family: sans-serif;
+  
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ffffff;
+    font-family: sans-serif;
+  
+  }
+  
+  /* smaller screens */
+  @media (max-width: 900px) {
+    section {
+      height: 100vh;
+      padding: 10px;
+      margin: 20px;
+      display: block;
+      background: #7896c7cf;
+      color: #eefaff;
+      font-size: 20px;
+      font-family: sans-serif;
+  
+    }
+  
+    .imgHolder {
+      margin-left: 30vw;
+      width: auto;
+      height: auto;
+  
+    }
+  
+    #photo img {
+      width: 200px;
+      height: 200px;
+  
+    }
+  
+    label {
+      display:block;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-right: 10px;
+  
+    }
+  
+    .mybuttons {
+      width: 250px;
+      margin-left: 100px;
+  
+    }
+  }
+  
