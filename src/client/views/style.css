@@ -45,7 +45,7 @@ section {
 .text {
     display: flex;
     margin-top: 30px;
-    padding-left: 5px;
+    padding-left: 15px;
     line-height: 25px;
     letter-spacing: 3px;
     margin-left: 220px;
@@ -58,10 +58,14 @@ section {
 
 #ourLocation {
   padding-top: 50px;
-
   }
 
-  #ourLocation p {
+#ourLocation a {
+    text-decoration: none;
+    color: #333;
+  }  
+
+#ourLocation p {
     margin-right: 30px;
     margin-bottom: 25%;
     color: #eefaff;
@@ -80,7 +84,7 @@ section {
 .holderLocation {
     justify-content: center;
     display: flex;
-    margin: 15px;
+    margin: 15px;  
   
   }
   
@@ -178,17 +182,17 @@ button {
  
 #save:hover {
   background-color: #333e4eb5;
-
 }  
 
 #delete:hover {
   background-color: #333e4eb5;
-
 }  
   
 .myButtons {
-    width: 250px;
-    margin-left: 550px;
+    width: 100%;
+    margin-left: 60px;
+    justify-content: center;
+    display: flex;
   
   }
   
@@ -196,13 +200,11 @@ button {
     font-size: 12px;
     margin-right: 20px;
     background-color: #a0606096;
-  
   }
   
 #delete {
     font-size: 12px;
     background-color: #a0606096;
-  
   }
   
 h1 {
@@ -265,7 +267,7 @@ footer {
       padding: 10px;
       margin: 20px;
       display: block;
-      background: #7896c7cf;
+      background: #c4a7a7b5;
       color: #eefaff;
       font-size: 20px;
       font-family: sans-serif;
@@ -278,11 +280,24 @@ footer {
       height: auto;
   
     }
+
+    .text {
+      margin-top: 30px;
+      padding-left: 15px;
+      line-height: 25px;
+      letter-spacing: 3px;
+      margin-left: 220px;
+      width: 60vw;
+      background: #c4a7a7b5;
+      color: #eefaff;
+      text-decoration: none;;
+    }
+
+    
   
     #photo img {
-      width: 200px;
-      height: 200px;
-  
+      width: 160px;
+      height: 125px;
     }
   
     label {
@@ -293,10 +308,6 @@ footer {
   
     }
   
-    .mybuttons {
-      width: 250px;
-      margin-left: 100px;
-  
-    }
+    
   }
   
