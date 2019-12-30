@@ -42,8 +42,7 @@ function callBack(req, res){
 
 // Post Route
 app.post('/save', function (req, res) {
-    projectData.location = req.body.location;
-    projectData.photo = req.body.photo;
+    projectData.tvData = req.body.showData;
     console.log('Post recieved');
     res.end();
 });

@@ -4,36 +4,27 @@ document.getElementById('delete').addEventListener('click', performDelete);
 // Function called by event listener
 function performAction(event) {
   // user input
-  let newlocation = document.getElementById('location').value;
-  
-
-  // API for tvmaze API
+  let input = document.getElementById('titleOne').value;
+  // API tvmaze
   const baseUrl = 'http://api.tvmaze.com/singlesearch/shows?q=';
   const episode = '&embed=episodes'; 
-  
   // GET and POST data, update user interface
-  getData(baseUrl, newlocation, episode)
+  getData(baseUrl, input, episode)
   .then( (data) => {
-    var location = [];
-    var photo = [];
+    const showData = [];
     for (let i = 0; i < data._embedded.episodes.length; i++) {
-      var loc = 'episode name: <a target="_blank" href="index2.html?'+data._embedded.episodes[i].summary+'">' + data._embedded.episodes[i].name +'</a><br>';
-      var num = 'episode number: ' + data._embedded.episodes[i].number + '<br>';
-      var seas = 'season: ' + data._embedded.episodes[i].season;
+      const season = 'Season: ' + data._embedded.episodes[i].season + ', ';
+      const number = 'Episode: ' + data._embedded.episodes[i].number + '<br>';
+      const title = 'Title: <a target="_blank" href="index2.html?'+data._embedded.episodes[i].summary+'">' + data._embedded.episodes[i].name +'</a>';
       if (data._embedded.episodes[i].image === null) {
-          var im = '<br><br>no picture found'; 
+          var image = '<br><br>No picture found'; 
       } else {
-          var im = '<br><br><img src=' + data._embedded.episodes[i].image.medium + '>';
-      };
-      console.log(loc);
-      location.push(loc+num+seas);
-      photo.push(im);
+          image = '<br><br><img src=' + data._embedded.episodes[i].image.medium + '>';
+        };
+      showData.push(season+number+title+image);
     }
-    console.log(location);
     postData('http://localhost:8080/save', {
-        location,
-        photo,
-      
+        showData,  
     });
     }).then( () => {
       updateUI('http://localhost:8080/all');
@@ -41,10 +32,9 @@ function performAction(event) {
 }
 
 
-
 // Function to GET tvmaze API Data
-const getData = async (baseUrl, newlocation, episode) => {
-  const response = await fetch(baseUrl+newlocation+episode);
+const getData = async (baseUrl, input, episode) => {
+  const response = await fetch(baseUrl+input+episode);
   try {
     const data = await response.json();
     console.log(data);
@@ -77,10 +67,8 @@ const updateUI = async () => {
   try {
     const allData = await request.json();
     console.log(allData);
-    for (let i = 0; i < allData.location.length; i++) {
-      document.getElementById('ourLocation').innerHTML += '<p>' + allData.location[i] + '</p>';
-      document.getElementById('photo').innerHTML += allData.photo[i];
-     
+    for (let i = 0; i < allData.tvData.length; i++) {
+      document.getElementById('ourEpisodes').innerHTML += '<div class="layout">' + allData.tvData[i] + '</div>';
     }
   } catch(error) {
       console.log('error', error);
@@ -90,8 +78,7 @@ const updateUI = async () => {
 
 // Function called by event listener, delete data
 function performDelete(event) {
-    document.getElementById('ourLocation').innerHTML = '';
-    document.getElementById('photo').innerHTML = '';
+    document.getElementById('ourEpisodes').innerHTML = '';
   }
 
 
